@@ -117,13 +117,27 @@ a {
   height: 1.5rem;
 }
 
-.nav-menu a:hover {
-  border-bottom: 1px solid #fff;
-  width: 70%;
-  opacity: 75%;
-  color: #fff;
+a.left {
+  position: relative;
 }
 
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+a.left:hover:before {
+  visibility: visible;
+  width: 65%;
+  color: #fff;
+  opacity: 75%;
+}
 
 
 /* ===========================================================
@@ -148,11 +162,11 @@ a {
   font-size: 40px;
   color: #ff6101;
   font-family: 'Aquire', sans-serif;
-  margin-top: 10rem;
+  margin-top: -2rem;
 }
 
 .showcase h2 {
-  font-size: 40px;
+  font-size: 30px;
   color: #555;
   font-family: 'Aquire', sans-serif;
   margin-top: -1.5rem;
@@ -182,10 +196,106 @@ a {
   height: 42px;
   justify-content: center;
   align-items: center;
+  border-radius: none;
 }
 
 .btn1 {
   background-color: #ff6101;
+}
+
+button {
+  border: none;
+}
+
+.header-down-arrow {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 2rem;
+  z-index: 10;
+}
+
+.header-down-arrow:hover {
+  filter: saturate(50%);
+}
+
+.header-down-arrow {
+  cursor: pointer;
+}
+
+.header-down-arrow {
+  filter: invert(50%);
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: .8;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.header-down-arrow img {
+  animation: 
+            pulse 2.5s 0s ease-out infinite;
+}
+
+
+/* ===========================================================
+                      PROJECTS                        
+============================================================== */
+.projects-text {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-text h1 {
+  font-family: 'Aquire', sans-serif;
+  font-size: 40px;
+  color: #ff6101;
+  text-shadow: 2px solid #fff;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin: 2rem 0;
+}
+
+.projects .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px 10px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 200px;
+  width: 350px;
+  opacity: 90%;
+  transition: transform 0.2s ease-in;
+  background-color: hsl(210, 97%, 95%, 100%);
+}
+
+.projects .card:hover {
+  transform: translateY(-2px);
+  transition-duration: 2s ease-in;
+  opacity: 65%;
+
+}
+
+.projects img {
+  display: flex;
+  justify-content: center;
 }
 
 
