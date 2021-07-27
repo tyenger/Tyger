@@ -196,15 +196,33 @@ a.left:hover:before {
   height: 42px;
   justify-content: center;
   align-items: center;
-  border-radius: none;
+  border-radius: 5px;
 }
 
 .btn1 {
   background-color: #ff6101;
 }
 
+.btn1:hover {
+  color: white;
+  border: 2px solid #ff6101;
+  background-color: #222;
+}
+
+.btn2 {
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #777;
+}
+
+.btn2:hover {
+  border: 2px solid #ff6101;
+
+}
+
 button {
   border: none;
+  border-radius: 5px;
 }
 
 .header-down-arrow {
@@ -253,6 +271,11 @@ button {
 /* ===========================================================
                       PROJECTS                        
 ============================================================== */
+.projects {
+  position: relative;
+  height: 25rem;
+}
+
 .projects-text {
   display: flex;
   justify-content: center;
@@ -284,10 +307,11 @@ button {
   opacity: 90%;
   transition: transform 0.2s ease-in;
   background-color: hsl(210, 97%, 95%, 100%);
+  border-radius: 5px;
 }
 
 .projects .card:hover {
-  transform: translateY(-2px);
+  transform: scale(1.10);
   transition-duration: 2s ease-in;
   opacity: 65%;
 
@@ -297,6 +321,83 @@ button {
   display: flex;
   justify-content: center;
 }
+
+
+
+/* ===========================================================
+                      SKILLS                        
+============================================================== */
+.skills {
+  position: relative;
+}
+
+.skills-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  height: 40rem;
+  background: #ff6101;
+  clip-path: polygon(40% 5%, 60% 5%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+}
+
+.skills-text {
+  display: flex;
+  justify-content: center;
+}
+
+.skills-text h1 {
+  font-family: 'Aquire', sans-serif;
+  font-size: 40px;
+  color: #222;
+  text-shadow: 2px solid #fff;
+  margin: 4rem 0;
+}
+
+.skills .grid1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin: -4rem 2rem;
+  padding: 0 12rem;
+}
+
+.skills .grid2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  margin: 2rem 2rem;
+}
+
+.skills .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: rem 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  height: 8rem;
+  width: 8rem;
+  transition: transform 0.2s ease-in;
+  background-color: #888;
+  border-radius: 5px;
+  margin: 2rem 0;
+}
+
+
+.skills .card:hover {
+  transform: scale(1.01);
+  transition-duration: 2s ease-in;
+  opacity: 65%;
+
+}
+.skills img {
+  display: flex;
+  max-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 /* ===========================================================
