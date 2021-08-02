@@ -63,12 +63,10 @@
         <div class="showcase-text">
             <h1>TY ENGER</h1>
             <h2>FRONT-END DEVELOPER</h2>
-            <p>AV systems integrator by day, web developer by night. 
-                Through my first year of experience, I have 
-                honed my skills in HTML, CSS, and began the pursuit 
-                of mastering Javascript. 
+            <p>A/V systems integrator by day, web developer by night. 
+                
                 This website is a showcase of the 
-                professional, personal, and passion projects I've been involved in.</p>        
+                personal, professional, and passion projects I've been involved in.</p>        
             <button><a href="#about" class="btn btn1 btn-outline">Learn More</a></button>
             <button><a href="#contact" class="btn btn2 btn-outline">Contact</a></button>
         </div>
@@ -112,31 +110,32 @@
 <!-- =====================================================-->
 <!--                        SKILLS                        -->
 <!-- =====================================================-->
-<section id="skills" class="skills">
-    <div class="skills-container">
-        <div class="skills-text">
-            <h1>SKILLS</h1>
+<section id="stack" class="stack">
+    <div class="stack-container">
+        <div class="stack-text">
+            <h1>TECH STACK</h1>
         </div>
 
-        <div class="skills grid1">
+        <div class="stack grid1">
         <!-- row 1 -->
             <div class="card">
-                <a href=""><img src="assets/img/skills/html5.png" alt="html"></a>
+                <a href=""><img src="assets/img/skills/html5.png" height="120px" width="120px" alt="html"></a>
+                
             </div>
             
             <div class="card">
-                <a href=""><img src="assets/img/skills/css.png" height="128px" alt="css"></a>
+                <a href=""><img src="assets/img/skills/css.png" height="120px" width="90px" alt="css"></a>
             </div>
             
             <div class="card">
-                <a href=""><img src="assets/img/skills/js.png" height="128px" width="128px" alt="javascript"></a>
+                <a href=""><img src="assets/img/skills/js.png" height="120px" width="90px" alt="javascript"></a>
             </div>
 
-            <div class="card">
-                <a href=""><img src="assets/img/skills/bootstrap.png" height="100px" width="128px" alt="bootstrap"></a>
+            <div class="card4">
+                <a href=""><img class="bootstrap" src="assets/img/skills/bootstrap.png" height="90px" width="110px" alt="bootstrap"></a>
             </div>
         </div>
-        <div class="skills grid2"> 
+        <div class="stack grid2"> 
             <!-- 3 5 4 -->
             <div class="card">
                 <a href=""><img src="assets/img/skills/vs.png" height="100px" width="100px" alt="vs code"></a>
@@ -146,29 +145,20 @@
                 <a href=""><img src="assets/img/skills/git.svg" height="120px" width="120px" alt="git"></a>
             </div>
             
+            <div class="card pc">
+                <a href=""><img src="assets/img/skills/apple.png" height="50px" width="50px"  alt="windows/mac"></a>
+                <span class="pclogos">|</span>
+                <a href=""><img src="assets/img/skills/windows.png" height="40px" width="40px"  alt="windows/mac"></a>
+            </div>
+
             <div class="card">
-                <a href=""><img src="" height="100px" width="100px" alt="photoshop"></a>
+                <a href=""><img src="assets/img/skills/ps.png" height="110px" width="110px" alt="photoshop"></a>
             </div>
             
             <div class="card">
-                <a href=""><img src="" height="100px" width="100px" alt="illustrator"></a>
+                <a href=""><img src="assets/img/skills/ill.png" height="110px" width="110px" alt="illustrator"></a>
             </div>
 
-            <div class="card">
-                <a href=""><img src="" height="100px" width="100px" alt="graphic design"></a>
-            </div>
-
-            <div class="card">
-                <a href=""><img src="" height="100px" width="100px" alt="communication"></a>
-            </div>
-
-            <div class="card">
-                <a href=""><img src="" height="100px" width="100px" alt="windows/mac"></a>
-            </div>
-
-            <div class="card">
-                <a href=""><img src="" height="100px" width="100px" alt="ui/ux"></a>
-            </div>
         </div>
     </div>
 </section>
@@ -176,20 +166,81 @@
 <!-- =====================================================-->
 <!--                        ABOUT                         -->
 <!-- =====================================================-->
-
+<section id="about" class="about">
+    <div class="about-container">
+        <div class="about-text about-flex">
+            <img src="./assets/img/graphic3.png" alt="">
+            <h1>About</h1>
+            <!-- <div class="about-grid">
+                <div class="about-design"><h1>UI/UX DESIGNER </h1></div>
+                <div class="about-code"><h1>&#60; CODER &#62;</h1></div>
+            </div> -->
+            <p>I'm a self-taught, front-end developer from Madison, WI - currently residing in Whitewater. 
+                I started learning web development because my grandpa needed a website to promote his Kentucky Bourbon Tours, and haven't looked back since.  
+                Through my first year of experience, I've honed my skills in HTML, CSS, and began the pursuit of mastering Javascript. I'm inspired by the
+                intersection of creativity and technicality that coding offers, and strive to make the web a more expressive and accessible place for users. 
+            </p>
+        </div>
+    </div>
+</section>
 
 <!-- =====================================================-->
 <!--                        CONTACT                       -->
 <!-- =====================================================-->
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <!-- FORM-->
+        <div id="contact" class="contact-form card">
+            <h1 class="contact-topper"><span class="contact">CONTACT</h1>
+            <div class="contact-form">
+                <form action="action_page.php">
+            
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="*Required"required="required">
+            
+                <label for="lname">Email</label>
+                <input type="text" id="email" name="email" placeholder="*Required"required="required">
+            
+                <label for="">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="*Required"required="required">
 
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="" style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+            
+                </form>
+            </div>
+        </div>
 
+        
+    </div>
+</section>
 
+<!-- =====================================================-->
+<!--                       FOOTER                         -->
+<!-- =====================================================-->
+<section id="footer" class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="left">
+                <div>
+                    <h1>Tyger</h1>
+                </div>
+            </div>
+            
+            <div class="mid">
 
+            </div>
+            
+            <div class="right">
 
+            </div>
 
-
-
-
+        </div>
+    </div>
+</section>
 
 
 
