@@ -14,6 +14,10 @@
     margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Flama', sans-serif;
   color: #fff;
@@ -73,6 +77,8 @@ a {
   justify-content: center;
   align-items: center;
 }
+/*  */
+
 
 
 /* logo */
@@ -106,24 +112,30 @@ a {
   display: flex;
   justify-content: center;
 }
+/*  */
+
 
 
 /* nav menu */
 .nav-menu ul {
   display: flex;
+  flex-direction: row;
+  padding: 0 1rem;
+}
+
+.nav-menu li { 
+  display: flex;
+  padding: 0 1rem;
+  font-family: 'Aquire', sans-serif;
+  font-size: 16px;
 }
 
 .nav-menu a{
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  gap: 2re1;
   position: relative;
   top: -30px;
   height: 1.5rem;
-}
-
-a.left {
-  position: relative;
 }
 
 a.left:before {
@@ -132,17 +144,18 @@ a.left:before {
   width: 0;
   height: 2px;
   bottom: 0;
-  left: 0;
   background-color: #fff;
   visibility: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
+
 a.left:hover:before {
   visibility: visible;
-  width: 65%;
+  width: 100%;
   color: #fff;
   opacity: 75%;
 }
+/*  */
 
 
 /* ===========================================================
@@ -187,7 +200,7 @@ a.left:hover:before {
 }
 
 .showcase-pic img {
-  width: 70%;
+  max-width: 70%;
   display: flex;
   align-items: center;
   clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%);
@@ -330,7 +343,7 @@ button {
 
 
 /* ===========================================================
-                      SKILLS                        
+                      STACK                        
 ============================================================== */
 .stack {
   position: relative;
@@ -384,7 +397,7 @@ button {
   padding: rem 2rem;
   grid-template-columns: repeat(3, 1fr);
   height: 8rem;
-  width: 8rem;
+  width: 10rem;
   transition: transform 0.2s ease-in;
   background-color: transparent;
   border-radius: 5px;
@@ -395,8 +408,10 @@ button {
 .stack .card:hover {
   transform: scale(1.02);
   transition-duration: 3s ease-in;
-
 }
+
+
+
 .stack img {
   display: flex;
   max-height: 100%;
@@ -434,6 +449,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 8rem;
 }
 
 
@@ -450,6 +466,15 @@ button {
   display: flex;
   opacity: 50%;
 }
+
+/* .hex {
+  position: absolute;
+  opacity: 75%;
+  transform: scale(4);
+  height: 400px;
+  overflow: hidden;
+  width: 400px;
+} */
 /* ===========================================================
                       ABOUT                        
 ============================================================== */
@@ -535,11 +560,10 @@ button {
   top: 14rem;
   right: 24rem;
   z-index: 2;
-  max-height: 100%;
   min-width: 0;
   width: 22rem;
   max-width: 20%;
-  opacity: 20%;
+  opacity: 15%;
 }
 
 /* ===========================================================
@@ -635,13 +659,125 @@ textarea {
 ============================================================== */
 .footer-container {
   position: relative;
-  height: 12rem;
   background: #ff6101;
   z-index: 1;
-  clip-path: polygon(0% 15%, 25% 15%, 40% 0, 60% 0, 75% 15%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+  clip-path: polygon(0 0,22% 0, 30% 33%, 100% 33%, 100% 49%, 100% 34%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.logo-footer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6101;
+  width: 320px;
+  font-family: 'Aquire', sans-serif;
+  color: #222;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 75% 100%, 25% 100%, 0 60%);
 
 }
 
+.logo-footer h1 {
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+  color: #222;
+  position: relative;
+  top: 2rem;
+  left: -2rem;
+}
+
+
+.logo-footer h2 {
+  position: relative;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  color: #222;
+  top: -1.6rem;
+  left: 6rem;
+}
+
+.foot-menu ul{
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  position: relative;
+  top: 68px;
+  padding: 0 2rem;
+  justify-content: center;
+}
+
+.foot-menu li {
+  padding: 0 2rem;
+  font-family: 'Aquire', sans-serif;
+}
+
+/* social icons */
+.social-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.social-footer a {
+  position: relative;
+  top: 17px;
+  margin: 30px;
+  font-size: 20px;
+}
+
+.social-footer a:hover {
+  color: #fff;
+  opacity: 75%;
+}
+
+.fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.foot-menu ul {
+  display: flex;
+}
+
+.foot-menu a{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  position: relative;
+  top: 0px;
+  font-family: 'Aquire Light', sans-serif;
+}
+
+a.foot:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+a.foot:hover:before {
+  visibility: visible;
+  width: 100%;
+  color: #fff;
+  opacity: 75%;
+}
+
+/*  */
 
 /* ===========================================================
                       UTILITIES                        
@@ -664,8 +800,8 @@ textarea {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 
