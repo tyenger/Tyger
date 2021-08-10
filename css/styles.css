@@ -8,10 +8,12 @@
 
 
 /* root styling */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -46,7 +48,7 @@ a {
   color: #222;
   height: 8rem;
   width: 100%;
-  clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+  /* clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%); */
 }
 .navbar .grid-3 {
   grid-template-columns: repeat(3, 1fr);
@@ -77,6 +79,10 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
 /*  */
 
 
@@ -112,25 +118,48 @@ a {
   display: flex;
   justify-content: center;
 }
+
+/* @media screen and (max-width: 600px) {
+  .logo {
+    display: flex;
+    height: 80px;
+    width: 200px;
+    top: -4rem;
+  }
+
+  .logo h1 {
+    font-size: 42px;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+    position: relative;
+    top: -1.5rem;
+  }
+} */
+
+
+
+
 /*  */
 
 
 
 /* nav menu */
-.nav-menu ul {
+.menu {
   display: flex;
   flex-direction: row;
-  padding: 0 1rem;
+  padding: 0 -1rem;
 }
 
-.nav-menu li { 
+.menu { 
   display: flex;
   padding: 0 1rem;
   font-family: 'Aquire', sans-serif;
   font-size: 16px;
 }
 
-.nav-menu a{
+.menu a{
   display: grid;
   grid-template-columns: repeat(5,1fr);
   position: relative;
@@ -151,11 +180,207 @@ a.left:before {
 
 a.left:hover:before {
   visibility: visible;
-  width: 100%;
+  width: 75%;
   color: #fff;
   opacity: 75%;
 }
+
+
+
+
+
+/* --- You will know what this is --- */
+#blobSvg {
+  max-width: 520px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.85);
+  color: #efefef;
+  z-index: 5;
+  padding: 1rem;
+}
+
+.nav__logo {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav__menucontainer {
+  position: relative;
+}
+
+.nav__hamburger {
+  color: inherit;
+  min-width: 32px;
+  min-height: 32px;
+  transition: opacity 80ms linear;
+  /* hiding the hamburger icon on large screen sizes */
+  display: none;
+  opacity: 0;
+}
+
+.nav__hamburgerclose {
+  color: inherit;
+  position: absolute;
+  top: 0;
+  min-width: 32px;
+  min-height: 32px;
+  transition: opacity 150ms linear;
+  /*   hiding the close icon and... */
+  display: none;
+  opacity: 0;
+  z-index: -1; /* pushing it behind the hamburger icon so that hamburger icon can be clicked */
+}
+
+.nav__menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav__item {
+  margin-right: 1rem;
+}
+
+.nav__link {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  box-shadow: 0 4px 0 -1px #a2e718;
+}
+
+
+/* ----- smaller screen sizes ----- */
+@media (max-width: 520px) {
+  .nav__hamburger {
+    /* making the hamburger icon visible on smaller screen sizes */
+    display: flex;
+    opacity: 1;
+  }
+
+  .nav__menu {
+    /* move menu offscreen */
+    opacity: 0;
+    position: fixed;
+    visibility: none;
+    top: -1000px;
+
+    /* just some styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #25310c;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.19);
+    border: 2px solid rgba(255, 255, 255, 0.2); /* part of glass morphism effect */
+    border-radius: 2rem 0 2rem 2rem;
+    background: rgba(255, 255, 255, 1);
+  }
+
+  /* uncomment the line below to activate on hover. */
+  /*   .nav__listcontainer:hover .nav__menu, */
+  .nav__listcontainer:focus .nav__menu,
+  .nav__listcontainer:focus-within .nav__menu {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 2rem;
+    right: 1.5rem;
+  }
+
+  /*   if the browser supports backdrop-filter property, 
+  then add it (for the glass morphism effect) */
+  @supports (backdrop-filter: blur(10px)) {
+    /* uncomment the line below to activate on hover. */
+    /*     .nav__listcontainer:hover .nav__menu, */
+    .nav__listcontainer:focus .nav__menu,
+    .nav__listcontainer:focus-within .nav__menu {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .nav__item {
+    margin-right: 0;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .nav__link:hover,
+  .nav__link:focus {
+    opacity: 0.8;
+    color: #121212;
+  }
+
+  /*  uncomment the line below to activate on hover. */
+  /* NOTE: Hover is not recommended, it will have side effects on this */
+  /*   .nav__listcontainer:hover .nav__hamburger, */
+  .nav__listcontainer:focus .nav__hamburger,
+  .nav__listcontainer:focus-within .nav__hamburger {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  /* uncomment the line below to activate on hover. */
+  /* NOTE: Hover is not recommended, it will have side effects on this */
+  /*   .nav__listcontainer:hover + .nav__hamburgerclose, */
+  .nav__listcontainer:focus + .nav__hamburgerclose,
+  .nav__listcontainer:focus-within + .nav__hamburgerclose {
+    display: flex;
+    opacity: 1;
+    z-index: 1;
+  }
+}
 /*  */
+
+/* MEDIA QUERIES 
+@media screen and (max-width: 550px) {
+  .nav {
+    position: relative;
+  }
+
+  .nav label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .menu a {
+    display: block;
+    border-bottom: 1px solid #eaeaeb;
+    margin: 0;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+  }
+
+  label {
+    color: #fcfc7c;
+  }
+} */
+
 
 
 /* ===========================================================
@@ -808,3 +1033,24 @@ a.foot:hover:before {
 /* ===========================================================
                           FOOTER            
    =========================================================== */
+
+
+
+
+
+
+
+/* ===========================================================
+                          MEDIA QUERIES           
+   =========================================================== */
+/* Tablets and under */
+@media(max-width: 768px) {
+  
+}
+
+/* Mobile */
+@media(max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+}

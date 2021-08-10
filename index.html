@@ -36,16 +36,44 @@
     <!-- logo -->
         <div></div>
     <!-- nav links -->
-        <div class="nav-menu">
-            <ul>
-                <li><a class="left" href="#projects">PROJECTS</a></li>
-                <li><a class="left" href="#stack">STACK</a></li>
-                <li><a class="left" href="#about">ABOUT</a></li>
-                <li><a class="left" href="#contact">CONTACT</a></li>
-            </ul>
+        
+    <!-- <div class="nav">
+            <label for="toggle" id="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <a  href="#projects">PROJECTS</a>
+                <a  href="#stack">STACK</a>
+                <a  href="#about">ABOUT</a>
+                <a  href="#contact">CONTACT</a>
+            </div>
         </div>
-    </div>
-
+    </div> -->
+    <nav class="nav">
+        <a href="#" class="nav__logo">CompanyLogo</a>
+        
+        <!-- focus on this div -->
+        <div class="nav__menucontainer">
+          <div class="nav__listcontainer" tabindex="0">
+            <ul class="nav__menu" id="navmenu">
+              <li class="nav__item">
+                <a href="#projects" class="nav__link">PROJECTS</a>
+              </li>
+              <li class="nav__item">
+                <a href="#stack" class="nav__link">STACK</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">ABOUT</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">CONTACT</a>
+              </li>
+            </ul>
+        <a id="hamburger" href="#navmenu" title="menu" class="nav__hamburger"><i class="fa fa-2x fa-hamburger"></i></a>
+          </div>
+          <a href="#!" title="close menu" class="nav__hamburgerclose"><i class="fa fa-2x fa-times-circle"></i></a>
+        </div>
+      
+      </nav>
     
 </section>  
 <div class="logo container">
