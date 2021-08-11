@@ -119,27 +119,6 @@ a {
   justify-content: center;
 }
 
-/* @media screen and (max-width: 600px) {
-  .logo {
-    display: flex;
-    height: 80px;
-    width: 200px;
-    top: -4rem;
-  }
-
-  .logo h1 {
-    font-size: 42px;
-  }
-
-  .logo h2 {
-    font-size: 18px;
-    position: relative;
-    top: -1.5rem;
-  }
-} */
-
-
-
 
 /*  */
 
@@ -200,8 +179,9 @@ a.left:hover:before {
   align-items: center;
   position: fixed;
   width: 100%;
-  background-color: rgba(51, 51, 51, 0.85);
-  color: #efefef;
+  background-color: #ff6101;
+  color: #222;
+  font-family: 'Aquire', sans-serif;
   z-index: 5;
   padding: 1rem;
 }
@@ -255,24 +235,36 @@ a.left:hover:before {
 }
 
 .nav__link {
-  color: inherit;
   text-decoration: none;
   width: 100%;
+  color: inherit;
 }
 
 .nav__link:hover,
 .nav__link:focus-visible {
-  box-shadow: 0 4px 0 -1px #a2e718;
+  box-shadow: 0 4px 0 -1px #ff6101;
 }
 
 
 /* ----- smaller screen sizes ----- */
-@media (max-width: 520px) {
+@media (max-width: 650px) {
   .nav__hamburger {
     /* making the hamburger icon visible on smaller screen sizes */
     display: flex;
     opacity: 1;
   }
+
+  .logo {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+
+  #navbar .grid-3{
+    display: none;
+    }
 
   .nav__menu {
     /* move menu offscreen */
@@ -281,20 +273,17 @@ a.left:hover:before {
     visibility: none;
     top: -1000px;
 
-    /* just some styles */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #25310c;
+    color: white;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.19);
     border: 2px solid rgba(255, 255, 255, 0.2); /* part of glass morphism effect */
-    border-radius: 2rem 0 2rem 2rem;
+    border-radius: 1rem 0.2rem 1rem 1rem;
     background: rgba(255, 255, 255, 1);
   }
 
-  /* uncomment the line below to activate on hover. */
-  /*   .nav__listcontainer:hover .nav__menu, */
   .nav__listcontainer:focus .nav__menu,
   .nav__listcontainer:focus-within .nav__menu {
     position: absolute;
@@ -304,14 +293,10 @@ a.left:hover:before {
     right: 1.5rem;
   }
 
-  /*   if the browser supports backdrop-filter property, 
-  then add it (for the glass morphism effect) */
   @supports (backdrop-filter: blur(10px)) {
-    /* uncomment the line below to activate on hover. */
-    /*     .nav__listcontainer:hover .nav__menu, */
     .nav__listcontainer:focus .nav__menu,
     .nav__listcontainer:focus-within .nav__menu {
-      background: rgba(255, 255, 255, 0.7);
+      background: #222;
       backdrop-filter: blur(10px);
     }
   }
@@ -323,22 +308,16 @@ a.left:hover:before {
 
   .nav__link:hover,
   .nav__link:focus {
-    opacity: 0.8;
-    color: #121212;
+    opacity: 70%;
+    color: white;
   }
 
-  /*  uncomment the line below to activate on hover. */
-  /* NOTE: Hover is not recommended, it will have side effects on this */
-  /*   .nav__listcontainer:hover .nav__hamburger, */
   .nav__listcontainer:focus .nav__hamburger,
   .nav__listcontainer:focus-within .nav__hamburger {
     opacity: 0;
     z-index: -1;
   }
 
-  /* uncomment the line below to activate on hover. */
-  /* NOTE: Hover is not recommended, it will have side effects on this */
-  /*   .nav__listcontainer:hover + .nav__hamburgerclose, */
   .nav__listcontainer:focus + .nav__hamburgerclose,
   .nav__listcontainer:focus-within + .nav__hamburgerclose {
     display: flex;
@@ -348,38 +327,6 @@ a.left:hover:before {
 }
 /*  */
 
-/* MEDIA QUERIES 
-@media screen and (max-width: 550px) {
-  .nav {
-    position: relative;
-  }
-
-  .nav label {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menu {
-    background-color: black;
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-
-  .menu a {
-    display: block;
-    border-bottom: 1px solid #eaeaeb;
-    margin: 0;
-  }
-
-  #toggle:checked + .menu {
-    display: block;
-  }
-
-  label {
-    color: #fcfc7c;
-  }
-} */
 
 
 
