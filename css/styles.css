@@ -184,13 +184,27 @@ a.left:hover:before {
   font-family: 'Aquire', sans-serif;
   z-index: 5;
   padding: 1rem;
+  flex-direction: column;
+
 }
 
-.nav__logo {
+.nav-logo {
+  display: flex;
   text-decoration: none;
   color: inherit;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 3rem;
+}
+
+.nav-logo2 {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .nav__menucontainer {
@@ -264,7 +278,7 @@ a.left:hover:before {
 
   #navbar .grid-3{
     display: none;
-    }
+  }
 
   .nav__menu {
     /* move menu offscreen */
@@ -278,11 +292,13 @@ a.left:hover:before {
     justify-content: center;
     align-items: center;
     color: white;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.19);
-    border: 2px solid rgba(255, 255, 255, 0.2); /* part of glass morphism effect */
+    width: 15rem;
+
+    border: 2px solid #ff6101;
     border-radius: 1rem 0.2rem 1rem 1rem;
     background: rgba(255, 255, 255, 1);
   }
+
 
   .nav__listcontainer:focus .nav__menu,
   .nav__listcontainer:focus-within .nav__menu {
@@ -324,6 +340,7 @@ a.left:hover:before {
     opacity: 1;
     z-index: 1;
   }
+
 }
 /*  */
 
