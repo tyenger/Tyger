@@ -25,6 +25,7 @@ body{
   color: #fff;
   line-height: 1.6;
   background-color: #222;
+  margin: 0 auto;
 }
 
 ul {
@@ -46,13 +47,17 @@ a {
 .navbar {
   background-color: #ff6101;
   color: #222;
-  height: 8rem;
+  height: 5rem;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   /* clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%); */
 }
 .navbar .grid-3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  height: 3rem;
+  overflow: hidden;
 }
 
 /* social icons */
@@ -60,11 +65,11 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  align-items: center;
 }
 
 .social a {
   position: relative;
-  top: -30px;
   margin: 30px;
   font-size: 20px;
 }
@@ -108,13 +113,15 @@ a {
   font-size: 60px;
   display: flex;
   justify-content: center;
-  color: #222
+  color: #222;
+  position: relative;
+  top: 1rem;
 }
 
 
 .logo h2 {
   position: relative;
-  top: -30px;
+  top: -10px;
   display: flex;
   justify-content: center;
 }
@@ -125,41 +132,39 @@ a {
 
 
 /* nav menu */
-.menu {
+.nav-menu ul{
   display: flex;
   flex-direction: row;
-  padding: 0 -1rem;
 }
 
-.menu { 
+.nav-menu {
   display: flex;
-  padding: 0 1rem;
-  font-family: 'Aquire', sans-serif;
-  font-size: 16px;
+  position: relative;
+  align-items: center;
 }
 
-.menu a{
+
+.nav-menu a{
   display: grid;
   grid-template-columns: repeat(5,1fr);
   position: relative;
-  top: -30px;
-  height: 1.5rem;
 }
 
-a.left:before {
+.nav-menu a:before {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
   bottom: 0;
+  left: 0;
   background-color: #fff;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-a.left:hover:before {
+.nav-menu a:hover:before {
   visibility: visible;
-  width: 75%;
+  width: 100%;
   color: #fff;
   opacity: 75%;
 }
@@ -207,9 +212,11 @@ a.left:hover:before {
 
 }
 
-.nav__menucontainer {
+#mobileNav {
   position: relative;
+  display: none
 }
+
 
 .nav__hamburger {
   color: inherit;
@@ -262,6 +269,8 @@ a.left:hover:before {
 
 /* ----- smaller screen sizes ----- */
 @media (max-width: 650px) {
+  
+  
   .nav__hamburger {
     /* making the hamburger icon visible on smaller screen sizes */
     display: flex;
@@ -359,7 +368,7 @@ a.left:hover:before {
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 1200px;
+  width: 1440px;
   justify-items: center;
   align-items: center;
 }
@@ -536,14 +545,15 @@ button {
 ============================================================== */
 .stack {
   position: relative;
+  margin: 0 auto;
 }
 
 .stack-container {
   position: relative;
-  max-width: 100%;
   margin: 0 auto;
   overflow: auto;
   height: 34rem;
+  max-width: 1440px;
   background: #ff6101;
   clip-path: polygon(40% 5%, 60% 5%, 100% 20%, 100% 100%, 60% 95%, 40% 95%, 0 100%, 0 20%);
 }
@@ -559,22 +569,30 @@ button {
   color: #222;
   text-shadow: 2px solid #fff;
   margin: 4rem 0;
+  height: 1rem;
 }
 
 .stack .grid1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  margin: -4rem 0rem;
-  padding: 0 20rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 8rem;
+  max-width: 1200px;
+  height: 8rem;
 }
 
 .stack .grid2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
-  margin: 2rem 2rem;
-  padding: 0 10rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 2rem;
+
+  
 
 }
 
@@ -656,14 +674,12 @@ button {
   opacity: 50%;
 }
 
-/* .hex {
-  position: absolute;
-  opacity: 75%;
-  transform: scale(4);
-  height: 400px;
-  overflow: hidden;
-  width: 400px;
-} */
+.vsLogo {
+  display: flex;
+  filter: brightness(0%);
+}
+
+
 /* ===========================================================
                       ABOUT                        
 ============================================================== */
@@ -689,6 +705,8 @@ button {
 .about-text {
   display: flex;
   justify-content: center;
+  position: relative;
+  top: -2rem;
 }
 
 .about-text h1 {
@@ -698,9 +716,9 @@ button {
   text-shadow: 2px solid #fff;
   justify-content: center;
   align-items: center;
-  z-index: 5;
+  z-index: 1;
   position: relative;
-  top: 5rem;
+  top: -2rem;
 }
 
 .about-text p {
@@ -710,7 +728,7 @@ button {
   text-shadow: 2px solid #fff;
   position: relative;
   width: 800px;
-  top: 6rem;
+  top: -2rem;
   z-index: 5;
 }
 
@@ -744,14 +762,14 @@ button {
 }
 
 .about img {
-  position: absolute;
+  position: relative;
   transform: scale(3);
-  top: 14rem;
-  right: 24rem;
+  top: 12rem;
+  left: 18rem;
+  display: flex;
   z-index: 2;
-  min-width: 0;
   width: 22rem;
-  max-width: 20%;
+  max-width: 250px;
   opacity: 15%;
 }
 
@@ -760,17 +778,25 @@ button {
 ============================================================== */
 .contact-container {
   position: relative;
-  height: 42rem;
+  height: 48rem;
   background: #222;
   z-index: 1;
+  width: 1200px;
 }
 
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 
 .contact-form {
   position: relative;
   margin: 0 10rem;
   color: #fff;
+  
 }
 
 #name, #email, #phone {
@@ -850,12 +876,21 @@ textarea {
   position: relative;
   background: #ff6101;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   clip-path: polygon(0 0,22% 0, 30% 33%, 100% 33%, 100% 49%, 100% 34%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+
 }
 
 
