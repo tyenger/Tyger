@@ -306,7 +306,7 @@ a.left:hover:before {
     visibility: visible;
     opacity: 1;
     top: 2rem;
-    right: 1.5rem;
+    left: -6.5rem;
   }
 
   @supports (backdrop-filter: blur(10px)) {
