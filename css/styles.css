@@ -42,7 +42,6 @@ a {
 /* ===========================================================
                       NAVBAR                        
 ============================================================== */
-
 /* container */
 .navbar {
   background-color: #ff6101;
@@ -88,10 +87,7 @@ a {
 
 
 
-/*  */
-
-
-
+/* ------------------------------------------------------------- */
 /* logo */
 .logo {
   display: flex;
@@ -106,7 +102,6 @@ a {
   color: #111;
   top: -6rem;
   clip-path: polygon(0 0, 100% 0, 100% 60%, 75% 100%, 25% 100%, 0 60%);
-
 }
 
 .logo h1 {
@@ -127,22 +122,19 @@ a {
 }
 
 
-/*  */
-
-
+/* ------------------------------------------------------------- */
 
 /* nav menu */
-.nav-menu ul{
-  display: flex;
-  flex-direction: row;
-}
-
 .nav-menu {
   display: flex;
   position: relative;
   align-items: center;
 }
 
+.nav-menu ul{
+  display: flex;
+  flex-direction: row;
+}
 
 .nav-menu a{
   display: grid;
@@ -170,15 +162,9 @@ a {
 }
 
 
-
-
-
-/* --- You will know what this is --- */
-#blobSvg {
-  max-width: 520px;
-}
-
-.nav {
+/* ------------------------------------------------------------- */
+/* mobile nav */
+.mobileNav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,10 +176,16 @@ a {
   z-index: 5;
   padding: 1rem;
   flex-direction: column;
-
 }
 
-.nav-logo {
+#mobileNav {
+  position: relative;
+  display: none;
+}
+
+
+/* logo */
+.mobileLogo {
   display: flex;
   text-decoration: none;
   color: inherit;
@@ -201,7 +193,7 @@ a {
   font-size: 3rem;
 }
 
-.nav-logo2 {
+.mobileLogo2 {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
@@ -214,7 +206,7 @@ a {
 
 #mobileNav {
   position: relative;
-  display: none
+  display: none;
 }
 
 
@@ -231,7 +223,7 @@ a {
 .nav__hamburgerclose {
   color: inherit;
   position: absolute;
-  top: 0;
+  top: 7.5rem;
   min-width: 32px;
   min-height: 32px;
   transition: opacity 150ms linear;
@@ -249,6 +241,7 @@ a {
   flex-wrap: wrap;
   font-size: 0.95rem;
   font-weight: 500;
+
 }
 
 .nav__item {
@@ -267,26 +260,24 @@ a {
 }
 
 
+/* ------------------------------------------------------------- */
 /* ----- smaller screen sizes ----- */
 @media (max-width: 650px) {
+  #mobileNav {
+    display: flex;
+    max-width: 100%;
+    
+  }
   
-  
+    /* making the hamburger icon visible */
   .nav__hamburger {
-    /* making the hamburger icon visible on smaller screen sizes */
     display: flex;
     opacity: 1;
   }
 
-  .logo {
-    display: none;
-  }
-
-  .social {
-    display: none;
-  }
-
   #navbar .grid-3{
     display: none;
+    
   }
 
   .nav__menu {
@@ -306,43 +297,50 @@ a {
     border: 2px solid #ff6101;
     border-radius: 1rem 0.2rem 1rem 1rem;
     background: rgba(255, 255, 255, 1);
+    
   }
 
 
+  /* menu item container positioning  */
   .nav__listcontainer:focus .nav__menu,
   .nav__listcontainer:focus-within .nav__menu {
     position: absolute;
     visibility: visible;
     opacity: 1;
-    top: 2rem;
-    left: -6.5rem;
+    top: 10rem;
+    left: 7.5rem;
+
   }
 
-  @supports (backdrop-filter: blur(10px)) {
-    .nav__listcontainer:focus .nav__menu,
+  /* menu item container styling */
+  .nav__listcontainer:focus .nav__menu,
     .nav__listcontainer:focus-within .nav__menu {
       background: #222;
-      backdrop-filter: blur(10px);
     }
   }
 
+  /* menu item positioning */
   .nav__item {
     margin-right: 0;
     padding: 0.5rem 1.5rem;
+    
   }
 
+  /* underline on hover */
   .nav__link:hover,
   .nav__link:focus {
-    opacity: 70%;
+    opacity: 80%;
     color: white;
   }
 
+  /* remove menu bars when active */
   .nav__listcontainer:focus .nav__hamburger,
   .nav__listcontainer:focus-within .nav__hamburger {
     opacity: 0;
     z-index: -1;
   }
 
+  /* keeps menu open */
   .nav__listcontainer:focus + .nav__hamburgerclose,
   .nav__listcontainer:focus-within + .nav__hamburgerclose {
     display: flex;
@@ -350,7 +348,6 @@ a {
     z-index: 1;
   }
 
-}
 /*  */
 
 
@@ -484,6 +481,44 @@ button {
 }
 
 
+
+
+
+/* ------------------------------------------------------------- */
+/* ----- smaller screen sizes ----- */
+@media (max-width: 650px) {
+  .showcase {
+    height: 500px;
+    position: relative;
+    margin: 0 3rem;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    overflow: hidden;
+    height: 25rem;
+    position: relative;
+    top: -4rem;
+  }
+
+  .showcase-pic {
+    display: none;
+  }
+
+  .showcase-text {
+    position: relative;
+    top: 3rem;
+  }
+
+  .header-down-arrow {
+    position: relative;
+    top: -4rem;
+  }
+}
+
+
 /* ===========================================================
                       PROJECTS                        
 ============================================================== */
@@ -539,6 +574,37 @@ button {
 }
 
 
+
+/* ------------------------------------------------------------- */
+/* ----- smaller screen sizes ----- */
+@media (max-width: 650px) {
+  .projects {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 900px;
+  }
+
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 2rem 0;
+  height: 800px;
+}
+
+.projects-cards {
+  transform: scale(1);
+}
+
+.projects-text h1 {
+  font-family: 'Aquire', sans-serif;
+  font-size: 40px;
+  color: #ff6101;
+}
+}
 
 /* ===========================================================
                       STACK                        
@@ -680,6 +746,63 @@ button {
 }
 
 
+
+/* ------------------------------------------------------------- */
+/* ----- smaller screen sizes ----- */
+@media (max-width: 650px) {
+  .stack {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .stack-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: auto;
+    height: 20rem;
+    max-width: 100%;
+    background: #ff6101;
+    clip-path: polygon(40% 5%, 60% 5%, 100% 20%, 100% 100%, 60% 95%, 40% 95%, 0 100%, 0 20%);
+  }
+  
+  .stack-text {
+    display: flex;
+    justify-content: center;
+    height: 7rem;
+  }
+  
+  .stack-text h1 {
+    font-family: 'Aquire', sans-serif;
+    font-size: 40px;
+    color: #222;
+    text-shadow: 2px solid #fff;
+    margin: 4rem 0;
+    height: 1rem;
+  }
+  
+  .stack .grid1 {
+    display: grid;
+    transform: scale(.5);
+    justify-content: center;
+    grid-template-rows: repeat(1, 1fr);
+    margin: 0 auto;
+    height: 4rem;
+  }
+  
+  .stack .grid2 {
+    display: grid;
+    transform: scale(.5);
+    justify-content: center;
+    grid-template-rows: repeat(1, 1fr);
+    margin: 0 auto;
+    height: 2rem;
+  }
+
+
+}
+
+
 /* ===========================================================
                       ABOUT                        
 ============================================================== */
@@ -732,34 +855,8 @@ button {
   z-index: 5;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
 
-.about-design h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 10rem;
-  font-family: 'Aquire';
-  color: #777;
-}
 
-.about-code h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 10rem;
-  font-family: 'Aquire Light';
-  color: #777;
-}
 
 .about img {
   position: relative;
@@ -771,6 +868,64 @@ button {
   width: 22rem;
   max-width: 250px;
   opacity: 15%;
+}
+
+
+/* ------------------------------------------------------------- */
+/* ----- smaller screen sizes ----- */
+@media (max-width: 650px) {
+  .about-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    height: 30rem;
+    background: #222;
+    overflow: visible;
+  }
+  
+  .about-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem auto;
+  }
+  
+  .about-text {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .about-text h1 {
+    font-family: 'Aquire', sans-serif;
+    font-size: 40px;
+    color: #ff6101;
+    text-shadow: 2px solid #fff;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    margin: 1rem auto;
+  }
+  
+  .about-text p {
+    font-family: 'Flama', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 2px solid #fff;
+    position: relative;
+    width: 65%;
+  }
+    
+  .about-text img {
+    position: absolute;
+    transform: scale(3);
+    width: 20%;
+    opacity: 15%;
+    display: flex;
+  }
 }
 
 /* ===========================================================
@@ -865,6 +1020,56 @@ input[type=submit]:hover {
 
 textarea {
   max-height: 220px;
+}
+
+
+
+
+/* ------------------------------------------------------------- */
+/* ----- smaller screen sizes ----- */
+@media (max-width: 650px) {
+  .contact-container {
+    position: relative;
+    height: 48rem;
+    background: #222;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+
+  
+  .contact-form {
+    position: relative;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    
+  }
+  
+  .contact-form textarea {
+    background: #222;
+    border: 2px solid #555;
+    color: #fff;
+  }
+  
+  .contact-form textarea:hover {
+    background: #222;
+    border: 2px solid #ff6101;
+  }
+  
+  .contact-topper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: 'Aquire', sans-serif;
+    font-size: 40px;
+    color: #ff6101;
+  }
 }
 
 
@@ -1003,6 +1208,32 @@ a.foot:hover:before {
 
 /*  */
 
+
+
+/* ------------------------------------------------------------- */
+/* ----- smaller screen sizes ----- */
+@media (max-width: 650px) {
+  .social-footer {
+    display: flex;
+    transform: scale(.8);
+    width: 100%;
+  }
+
+  .foot-menu {
+    display: none;
+  }
+
+  .logo-footer {
+    transform: scale(.6);
+    position: relative;
+    margin: 0 -4rem;
+  }
+}
+
+
+
+
+
 /* ===========================================================
                       UTILITIES                        
 ============================================================== */
@@ -1049,7 +1280,4 @@ a.foot:hover:before {
 
 /* Mobile */
 @media(max-width: 500px) {
-  .navbar {
-    height: 110px;
-  }
 }
