@@ -1226,7 +1226,7 @@ a.foot:hover:before {
   .logo-footer {
     transform: scale(.6);
     position: relative;
-    margin: 0 -6rem;
+    margin: 0 -5rem;
   }
 }
 
