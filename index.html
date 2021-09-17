@@ -15,8 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
 
 <!-- Core theme CSS-->
-    <link href="css/utilities.css" rel="stylesheet" />
-    
     <link href="css/styles.css" rel="stylesheet" />
 
 
@@ -37,12 +35,10 @@
         <div></div>
     <!-- nav links -->
     <div class="nav-menu">
-        <ul>
-            <li><a class="" href="#projects">PROJECTS</a></li>
-            <li><a class="" href="#stack">STACK</a></li>
-            <li><a class="" href="#about">ABOUT</a></li>
-            <li><a class="" href="#contact">CONTACT</a></li>
-        </ul>
+            <span><a class="" href="#projects">PROJECTS</a></span>
+            <span><a class="" href="#stack">STACK</a></span>
+            <span><a class="" href="#about">ABOUT</a></span>
+            <span><a class="" href="#contact">CONTACT</a></span>
     </div>
     </div>
     <!-- mobile nav -->
@@ -66,7 +62,7 @@
             <a href="#contact" class="nav__link">CONTACT</a>
             </li>
         </ul>
-    <a id="hamburger" href="#navmenu" title="menu" class="nav__hamburger"><i class="fa fa-2x fa-bars"></i></a>
+        <a id="hamburger" href="#navmenu" title="menu" class="nav__hamburger"><i class="fa fa-2x fa-bars"></i></a>
         </div>
         <a href="#!" title="close menu" class="nav__hamburgerclose"><i class="fa fa-2x fa-times-circle"></i></a>
         </div>
@@ -84,48 +80,66 @@
 <!-- =====================================================-->
 <!--                        SHOWCASE                      -->
 <!-- =====================================================-->
-<section id="showcase" class="showcase">
-    <div class="container grid-2">
+<div class="showcase">
+    <div class="showcase-container flex">
         <div class="showcase-text">
             <h1>TY ENGER</h1>
             <h2>FRONT-END DEVELOPER</h2>
             <p>A/V integrator by day, web developer by night. 
-                
                 This website is a showcase of the 
                 personal, professional, and passion projects I've been involved in.</p>        
-            <button><a href="#about" class="btn btn1 btn-outline">Learn More</a></button>
-            <button><a href="#contact" class="btn btn2 btn-outline">Contact</a></button>
-        </div>
+            <div class="buttons">
+                <button><a href="#about" class="btn btn1 btn-outline">Learn More</a></button>
+                <button><a href="#contact" class="btn btn2 btn-outline">Contact</a></button>
+            </div>
+            </div>
         
-        <div class="showcase-pic">
+        <section class="showcase-pic">
             <img src="./assets/img/prof2.jpg" alt="">
-        </div>
+        </section>
     </div>       
-    <section class="header-down-arrow">
-        <a href="#projects"><img src="assets/img/downarrow.png" class="js-scroll-trigger" href="" width="50"></a>
-    </section>
-</section>
+
+    <div class="header-down-arrow">
+        <a href="#projects"><img src="assets/img/downarrow.png" class="js-scroll-trigger" href="" ></a>
+    </div>
+</div>
 
 <!-- =====================================================-->
 <!--                        PROJECTS                          -->
 <!-- =====================================================-->
 <section id="projects" class="projects">
-    <div class="container">
+    <div class="projects-container">
         <div class="projects-text">
             <h1>PROJECTS</h1>
         </div>
 
         <div class="projects-cards grid">
             <div class="card">
-                <a href="https://www.toursbymerle.com" target="_blank"><img src="assets/img/tbm.png" height="200px" width="350px" alt=""></a>
+                <a class="apic" href="https://www.toursbymerle.com" target="_blank"><img src="assets/img/tbm.png" height="200px" width="350px" alt=""></a>
+                <div class="desc1">
+                    <h1>Tours By Merle</h1>
+                    <p>This website was designed and hosted using Wix. It features a landing page with successive links guiding the user
+                        to more information and the ability to book a tour. 
+                    </p>
+                </div>
             </div>
             
             <div class="card">
                 <a href="https://github.com/tyenger/SecurityExecutiveEnterprises/tree/main/SEE_Final" target="_blank"><img src="assets/img/see.png" height="200px" width="350px" alt=""></a>
+                <div class="desc2">
+                    <h1>Security Executive Enterprises, LLP</h1>
+                    <p>Contracted by a local security business, I initally built the website using Bootstrap
+                        but ultimately deleted everything and coded it from the ground up. Built using HTML, CSS, JS, JQUERY.
+                    </p>
+                </div>
             </div>
             
             <div class="card">
                 <a href="https://github.com/tyenger/Tyger" target="_blank"><img src="assets/img/portfolio.png" height="200px" width="350px" alt=""></a>
+                <div class="desc3">
+                    <h1>Personal Portfolio</h1>
+                    <p>Designed and developed from scratch. Regularly maintained and updated. Built using HTML, CSS, JS, JQUERY.</p>
+                </div>
             </div>
         </div>
 
@@ -138,67 +152,64 @@
 <!-- =====================================================-->
 <section id="stack" class="stack">
     <div class="stack-container">
-        <!-- <div>
-            <img src="./assets/img/hex.png" class="hex" alt="">
-        </div> -->
+        
         
         <div class="stack-text">
             <h1>TECH STACK</h1>
         </div>
 
-        <div class="stack grid1">
-        <!-- row 1 -->
-            <div class="card">
-                <img src="assets/img/skills/html.png" height="100px" width="100px" alt="html">
+        <div class="grid1">
+            <div class="item1">
+                <img src="assets/img/skills/html.png" height="100em" width="100em" alt="html">
             </div>
             
-            <div class="card">
-                <img src="assets/img/skills/css3.png" height="100px" width="75px" class="css"  alt="css">
+            <div class="item1">
+                <img src="assets/img/skills/css3.png" height="100em" width="75em" class="css"  alt="css">
 
             </div>
             
-            <div class="card">
-                <img src="assets/img/skills/js.png" height="100px" width="70px" alt="javascript">
+            <div class="item1">
+                <img src="assets/img/skills/js.png" height="100em" width="70em" alt="javascript">
 
             </div>
 
-            <div class="card">
-                <img class="bootstrap" src="assets/img/skills/bootstrap.png" height="70px" width="90px" alt="bootstrap">
+            <div class="item1">
+                <img class="bootstrap" src="assets/img/skills/bootstrap.png" height="70em" width="90em" alt="bootstrap">
 
             </div>
         </div>
-        <div class="stack grid2"> 
-            <!-- 3 5 4 -->
-            <div class="card">
-                <img src="assets/img/skills/vs.png" class="vsLogo" height="150px" width="140px" alt="vs code">
+        <div class="grid2"> 
+            <div class="item2">
+                <img src="assets/img/skills/vs.png" class="vsLogo" height="150em" width="140em" alt="vs code">
 
             </div>
             
-            <div class="card">
-                <img src="assets/img/skills/git.svg" height="120px" width="120px" alt="git">
-
-            </div>
-            
-            <div class="card pc">
-                <img src="assets/img/skills/apple.png" height="50px" width="50px"  alt="windows/mac">
+            <div class="item2 pc">
+                <img src="assets/img/skills/apple.png" height="50em" width="50em"  alt="windows/mac">
 
                 <span class="pclogos">|</span>
-                <img src="assets/img/skills/windows.png" height="40px" width="40px"  alt="windows/mac">
+                <img src="assets/img/skills/windows.png" height="40em" width="40em"  alt="windows/mac">
 
             </div>
-
-            <div class="card">
-                <img src="assets/img/skills/ps.png" height="50px" width="50px" alt="photoshop">
+            <div class="item2">
+                <img src="assets/img/skills/git.svg" height="120em" width="120em" alt="git">
 
             </div>
             
-            <div class="card">
-                <img src="assets/img/skills/ill.png" height="50px" width="50px" alt="illustrator">
+            
+        </div>
+        <div class="grid3">
+            <div class="item3">
+                <img src="assets/img/skills/ps.png" height="50em" width="50em" alt="photoshop">
+
+            </div>
+            
+            <div class="item3">
+                <img src="assets/img/skills/ill.png" height="50em" width="50em" alt="illustrator">
 
             </div>
 
         </div>
-        
     </div>
 </section>
 
@@ -207,8 +218,8 @@
 <!-- =====================================================-->
 <section id="about" class="about">
     <div class="about-container">
-        <div class="about-text about-flex">
-            <img src="./assets/img/graphic3.png" alt="">
+        <div class="about-text">
+            <!-- <img src="" alt=""> -->
             <h1>About</h1>
             <p>I'm a self-taught, front-end developer from Madison, WI - currently residing in Whitewater. 
                 I started learning web development because my grandpa needed a website to promote his Kentucky Bourbon Tours business, and haven't looked back since.  
@@ -225,7 +236,7 @@
 <section id="contact" class="contact">
     <div class="contact-container">
         <!-- FORM-->
-        <div class="contact-form card">
+        <div class="contact-form">
             <h1 class="contact-topper"><span class="contact">CONTACT</h1>
             <div class="contact-form">
                 <form action="https://formspree.io/f/xrgroedd" method="POST" id="myForm">
@@ -243,7 +254,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="" style="height:200px"></textarea>
             
-                <input type="submit" value="Submit">
+                <input type="submit" value="SUBMIT">
             
                 </form>
             </div>
@@ -256,16 +267,17 @@
 <!-- =====================================================-->
 <!--                       FOOTER                         -->
 <!-- =====================================================-->
+
 <section id="footer" class="footer">
     <div class="footer-container">
         <div class="footer-grid">
-            <div class="logo-footer">
+            <div class="footer-logo">
                 <a href="index.html">
                     <h1>TYGER</h1>
-                    <h2>.DEV</h2>
+                    <h2>DEVELOPMENT</h2>
                 </a>
             </div>
-            
+            <hr>
             <div class="foot-menu">
                 <ul>
                     <li><a class="foot" href="#projects">PROJECTS</a></li>
@@ -274,32 +286,21 @@
                     <li><a class="foot" href="#contact">CONTACT</a></li>
                 </ul>
             </div>
-
+            <hr>
             <div class="social-footer">
                 <a href="https://github.com/tyenger" target="_blank" class="fa fa-github-square"></a>
                 <a href="https://www.linkedin.com/in/tyenger/" target="_blank" class="fa fa-linkedin"></a>
                 <a href="mailto:tya.enger@gmail.com" target="_blank" class="fa fa-envelope"></a>
                 <a href="tel:608-630-0343" target="_blank" class="fa fa-phone"></a>
             </div>
-
         </div>
     </div>
-    
 </section>
 
 
 
-<!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- Contact form JS-->
-    <script src="assets/mail/jqBootstrapValidation.js"></script>
-    <script src="assets/mail/contact_me.js"></script>
-<!-- Core theme JS-->
     <script src="script.js"></script>
-
 </body>
 </html>
 
