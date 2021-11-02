@@ -1,10 +1,9 @@
-                      /* FONTS */
-/* Flama */
 @import url(//db.onlinewebfonts.com/c/54f5f645f140cd68536c94c32f92d865?family=Flama);
-
-/* Aquire */
 @import url('http://fonts.cdnfonts.com/css/aquire');
 
+/* * {
+  border: 1px solid red;
+} */
 
 
 /* ===========================================================
@@ -413,6 +412,7 @@ button {
 .showcase-pic {
   position: relative;
   width: 30rem;
+  display: flex;
 }
 
 @media(max-width: 768px) {
@@ -444,12 +444,14 @@ button {
 }
 
 .showcase-pic img {
+  margin: 0 auto;
   max-width: 70%;
   min-width: 50%;
   display: flex;
   align-items: center;
   clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%);
   position: relative;
+  justify-content: center;
 
 }
 
@@ -535,6 +537,7 @@ button {
                       PROJECTS                        
 ============================================================== */
 .projects {
+  position: relative;
   min-height: 28em;
   margin: 0 auto;
   max-width: 100%;
@@ -568,16 +571,15 @@ button {
 
 .projects .card{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  padding: 0px 10px;
   grid-template-columns: repeat(3, 1fr);
-  height: 12em;
   opacity: 60%;
   width: 21em;
   transition: transform 0.3s ease-in;
-  background-color: hsl(210, 97%, 95%, 100%);
+  background-color: transparent;
+  color: white;
   border-radius: 5px;
 }
 
@@ -591,40 +593,6 @@ button {
 .projects img {
   display: flex;
   justify-content: center;
-}
-
-
-.desc1, .desc2, .desc3 {
-  background-color: rgba(34, 34, 34, 0.8);
-  position: absolute;
-  width: 20em;
-  height: 9rem;
-  color: #fff;
-  font-family: 'Flama', sans-serif;
-  font-size: .8rem;
-  border-radius: 5px;
-  opacity: 0.0;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-}
-
-
-.apic:hover + .desc1 {
-  opacity: 1.0;
-  
-}
-
-.apic:hover + .desc2 {
-  opacity: 1.0;
-  
-}
-
-.apic:hover + .desc3 {
-  opacity: 1.0;
-  
 }
 
 
@@ -1152,9 +1120,7 @@ a.foot:hover:before {
 @media(max-width: 500px) {
 }
 
-/* * {
-  border: 1px solid red;
-} */
+
 
 hr {
   border-color: #333;
