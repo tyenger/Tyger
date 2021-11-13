@@ -1,5 +1,6 @@
 @import url(//db.onlinewebfonts.com/c/54f5f645f140cd68536c94c32f92d865?family=Flama);
 @import url('http://fonts.cdnfonts.com/css/aquire');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
 /* * {
   border: 1px solid red;
@@ -24,12 +25,13 @@ html {
 }
 
 body{
-  font-family: 'Flama', sans-serif;
+  font-family: 'Teko', sans-serif;
   color: #fff;
   line-height: 1.6;
   background-color: #222;
   margin: 0 auto;
   height: 100vh;
+  max-width: 1440px;
 }
 
 ul {
@@ -55,12 +57,7 @@ button {
   overflow: auto;
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+
 
 .grid-3 {
   display: grid;
@@ -82,7 +79,6 @@ button {
   color: #222;
   height: 5rem;
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   /* border: 2px solid red; */
   /* clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%); */
@@ -369,15 +365,14 @@ button {
 .showcase {
   min-height: 30em;
   margin: 0 auto;
-  max-width: 100%;
   overflow: hidden;
-  /* border: 2px solid red; */
+  max-width: 80%;
+
 }
 
 .showcase-container{
-  display: grid;
+  display: flex;
   max-width: 100%;
-  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
   gap: 2rem;
   margin: 0 auto;
 }
@@ -411,8 +406,9 @@ button {
 /* pic */
 .showcase-pic {
   position: relative;
-  width: 30rem;
-  display: flex;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 
 @media(max-width: 768px) {
@@ -539,13 +535,12 @@ button {
 .projects {
   position: relative;
   min-height: 28em;
-  margin: 0 auto;
-  max-width: 100%;
-  /* border: 2px solid red; */
+  margin: 2rem auto;
+  background-color: #222;
 }
 
 .projects-container {
-  max-width: 100%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -595,6 +590,31 @@ button {
   justify-content: center;
 }
 
+.card h1{
+font-size: 1.75rem;
+}
+
+.card p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.desc1 hr {
+  width: 20%;
+}
+
+.desc2 hr {
+  width: 20%;
+}
+
+.desc3 hr {
+  width: 20%;
+}
+
+.vscode {
+  filter: brightness(0);
+}
+
 
 
 /* ------------------------------------------------------------- */
@@ -627,125 +647,29 @@ button {
   font-family: 'Aquire', sans-serif;
   font-size: 2.5em;
   color: #222;
-  text-shadow: 2px solid #fff;
   margin: 4rem 0;
 }
 
-.grid1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   margin: 0 auto;
-  transform: scale(.95);
-  max-width: 100%;
-  min-height: 8rem;
-  max-width: 40rem;
 }
 
-.grid2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
-  transform: scale(1);
-  max-width: 100%;
-  max-width: 38rem;
+.list-item {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin: 0 auto;
+  gap: 2rem;
+  padding: .5rem 0;
+  width: 20rem;
 }
 
-.grid3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
-  margin: 0 auto;
-  transform: scale(1);
-  max-width: 24rem;
-  margin: 0 auto;
+.list-item h2 {
+  color: #222;
 }
-
-.item1{
-  display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  width: 4em;
-  transition: transform 0.2s ease-in;
-  background-color: transparent;
-  margin: 0 auto;
-
-}
-
-.item2{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  transition: transform 0.2s ease-in;
-  background-color: transparent;
-}
-
-
-.item3{
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  transition: transform 0.2s ease-in;
-  background-color: transparent;
-}
-
-.item1, .item2, .item3:hover {
-  transform: scale(1.02);
-  transition-duration: 3s ease-in;
-}
-
-.pc {
-  position: relative;
-  gap: .75rem;
-
-  align-items: center;
-  justify-content: center;
-}
-
-.pclogos {
-  position: relative;
-  font-size: 2rem;
-  color: #000;
-}
-
-.skill-text {
-  font-family: 'Aquire', sans-serif;
-  font-size: 2rem;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-
-.bootstrap {
-  position: relative;
-  top: 1rem;
-}
-
-.card4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 8rem;
-}
-
-
-.htmllogo {
-  position: absolute;
-  font-family: 'Flama', sans-serif;
-  display: none;
-}
-
-
-.htmllogo:hover {
-  position: absolute;
-  font-family: 'Flama', sans-serif;
-  display: flex;
-  opacity: 50%;
-}
-
-.vsLogo {
-  display: flex;
-  filter: brightness(0%);
 }
 
 
@@ -758,10 +682,18 @@ button {
 /* =============================================================================
                                                                           ABOUT                        
 ================================================================================ */
+.about {
+  position: relative;
+  margin: 0 auto;
+  max-width: 80%;
+  background: #222;
+
+}
+
+
 .about-container {
   position: relative;
-  max-width: 100%;
-  margin: 0 ;
+  margin: 0 auto;
   overflow: auto;
   min-height: 20rem;
   background: #222;
@@ -819,11 +751,17 @@ button {
 /* =============================================================================================
                                       CONTACT                       
 ================================================================================================ */
+.contact {
+  background: #222;
+
+}
+
 .contact-container {
   position: relative;
   background: #222;
   z-index: 1;
-  max-width: 40rem;
+  max-width: 40%;
+
   /* border: 2px solid red; */
   display: flex;
   justify-content: center;
@@ -935,7 +873,7 @@ textarea {
   z-index: 1;
   display: flex;
   justify-content: center;
-  max-width: 100%;
+
   margin: 0 auto;
   /* border: 2px solid red; */
   clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
@@ -1122,7 +1060,7 @@ a.foot:hover:before {
 
 
 
-hr {
+.footer hr {
   border-color: #333;
   width: 42%;
   margin: 0 auto;
