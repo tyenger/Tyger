@@ -622,7 +622,7 @@ font-size: 1.75rem;
 
 
 /* =============================================================================
-                                                                        STACK                        
+                                    STACK                        
 ================================================================================ */
 
 .stack-container {
@@ -670,22 +670,27 @@ font-size: 1.75rem;
 .list-item h2 {
   color: #222;
 }
-}
+
 
 
 
 /* ------------------------------------------------------------- */
 /* ----- smaller screen sizes ----- */
-
+@media (max-width: 680px) {
+  .stack-container {
+    min-height: 70rem;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 100%, 70% 95%, 30% 95%, 0 100%, 0% 30%);
+  }
+}
 
 
 /* =============================================================================
-                                                                          ABOUT                        
+                                      ABOUT                        
 ================================================================================ */
 .about {
   position: relative;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 100%;
   background: #222;
 
 }
@@ -694,11 +699,8 @@ font-size: 1.75rem;
 .about-container {
   position: relative;
   margin: 0 auto;
-  overflow: auto;
   min-height: 20rem;
   background: #222;
-  overflow: visible;
-  /* border: 2px solid red; */
 }
 
 .about-text {
@@ -707,7 +709,7 @@ font-size: 1.75rem;
   position: relative;
   align-items: center;
   flex-direction: column;
-  margin: 0 6em;
+  margin: 0 14em;
 }
 
 .about-text h1 {
@@ -722,31 +724,21 @@ font-size: 1.75rem;
 }
 
 .about-text p {
+  position: relative;
   font-family: 'Flama', sans-serif;
   font-size: 1.2em;
-  color: #fff;
-  text-shadow: 2px solid #fff;
-  position: relative;
-  max-width: 40em;
-  z-index: 5;
-}
-
-.about img {
-  position: relative;
-  transform: scale(3);
-  top: 12rem;
-  left: 18rem;
-  display: flex;
-  z-index: 2;
-  width: 22rem;
-  max-width: 200px;
-  opacity: 15%;
+  color: whitesmoke;
+  padding: 0;
 }
 
 
 /* ------------------------------------------------------------- */
 /* ----- smaller screen sizes ----- */
-
+@media (max-width: 880px) {
+  .about-text {
+    margin: 0 2em;
+  }
+}
 
 /* =============================================================================================
                                       CONTACT                       
@@ -760,7 +752,7 @@ font-size: 1.75rem;
   position: relative;
   background: #222;
   z-index: 1;
-  max-width: 40%;
+  max-width: 42%;
 
   /* border: 2px solid red; */
   display: flex;
@@ -858,8 +850,22 @@ textarea {
 
 /* ------------------------------------------------------------- */
 /* ----- smaller screen sizes ----- */
-@media (min-width: 600px) {
+@media (max-width: 1100px) {
+  .contact-container {
+    position: relative;
+    background: #222;
+    z-index: 1;
+    max-width: 60%;
+  }
+}
 
+@media (max-width: 800px) {
+  .contact-container {
+    position: relative;
+    background: #222;
+    z-index: 1;
+    max-width: 100%;
+  }
 }
 
 
@@ -875,8 +881,6 @@ textarea {
   justify-content: center;
 
   margin: 0 auto;
-  /* border: 2px solid red; */
-  clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
 
 }
 
@@ -885,6 +889,7 @@ textarea {
   margin: 0 auto;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+  
 }
 
 /* logo */
@@ -897,6 +902,7 @@ textarea {
   position: relative;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 
 }
 
@@ -916,15 +922,17 @@ textarea {
   justify-content: center;
   color: #222;
   top: -2rem;
+  
 }
 
 
 /* social icons */
 .social-footer {
   display: grid;
+  max-width: 100%;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  padding: 0 16rem;
+  margin: 0 auto;
 }
 
 .social-footer a {
@@ -947,6 +955,7 @@ textarea {
   justify-content: center;
   margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 
 .foot {
@@ -998,19 +1007,16 @@ a.foot:hover:before {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr) );
+    
   }
 
   .footer-container {
     position: relative;
     background: #ff6101;
-    z-index: 1;
     display: flex;
     justify-content: center;
     max-width: 100%;
     margin: 0 auto;
-    /* border: 2px solid red; */
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-  
   }
 
   
@@ -1023,6 +1029,7 @@ a.foot:hover:before {
     max-width: 100%;
     width: 2rem;
     justify-content: center;
+    
   }
 }
 
@@ -1036,9 +1043,7 @@ a.foot:hover:before {
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr) );
   }
 
-  .foot-menu {
-    margin: 1rem auto;
-  }
+
 }
 
 
