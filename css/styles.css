@@ -109,6 +109,7 @@ button {
 .social a:hover {
   color: #fff;
   opacity: 75%;
+  transition: 0.2s ease-in;
 }
 
 .fa {
@@ -259,10 +260,6 @@ button {
   color: inherit;
 }
 
-.nav__link:hover,
-.nav__link:focus-visible {
-  box-shadow: 0 4px 0 -1px #ff6101;
-}
 
 
 /* ------------------------------------------------------------- */
@@ -336,6 +333,8 @@ button {
   .nav__link:focus {
     opacity: 80%;
     color: white;
+  transition: 0.2s ease-in;
+
   }
 
   /* remove menu bars when active */
@@ -373,7 +372,7 @@ button {
 .showcase-container{
   display: flex;
   max-width: 100%;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0 auto;
 }
 
@@ -407,8 +406,15 @@ button {
 .showcase-pic {
   position: relative;
   margin: 0 auto;
-  height: 100%;
+  display: block;
+  height: auto;
   width: 100%;
+}
+
+@media(min-width:768px) {
+  .showcase-pic {
+    width: 100%;
+  }
 }
 
 @media(max-width: 768px) {
@@ -442,9 +448,8 @@ button {
 .showcase-pic img {
   margin: 0 auto;
   max-width: 70%;
-  min-width: 50%;
-  display: flex;
-  align-items: center;
+  display: block;
+  height: auto;
   clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%);
   position: relative;
   justify-content: center;
@@ -469,6 +474,8 @@ button {
   color: white;
   border: 2px solid #ff6101;
   background-color: #222;
+  transition: 0.2s ease-in;
+
 }
 
 .btn2 {
@@ -479,6 +486,7 @@ button {
 
 .btn2:hover {
   border: 2px solid #ff6101;
+  transition: 0.2s ease-in;
 
 }
 
@@ -501,6 +509,8 @@ button {
 
 .header-down-arrow:hover {
   filter: saturate(20%);
+  transition: 0.2s ease-in;
+
 }
 
 .header-down-arrow img {
@@ -570,7 +580,6 @@ button {
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  opacity: 60%;
   width: 21em;
   transition: transform 0.3s ease-in;
   background-color: transparent;
@@ -578,12 +587,22 @@ button {
   border-radius: 5px;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  transition-duration: 1.5s ease-in;
-  opacity: 100%;
-
+.wrapper {
+  opacity: .6;
+  transition: opacity .75s ease-out;
+  transition: .2s ease-in;
 }
+
+.wrapper:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.wrapper:hover .card p {
+  border: 1px solid red;
+}
+
 
 .projects img {
   display: flex;
@@ -592,12 +611,17 @@ button {
 
 .card h1{
 font-size: 1.75rem;
+opacity: .9;
+
 }
 
 .card p {
   font-size: 1.25rem;
   margin-top: 1rem;
+  opacity: .8;
 }
+
+
 
 .desc1 hr {
   width: 20%;
@@ -629,11 +653,11 @@ font-size: 1.75rem;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
-  min-height: 40rem;
+  min-height: 45rem;
   max-width: 100%;
   background: #ff6101;
   /* border: 2px solid red; */
-  clip-path: polygon(40% 5%, 60% 5%, 100% 20%, 100% 100%, 60% 95%, 40% 95%, 0 100%, 0 20%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 10%, 100% 100%, 70% 90%, 30% 90%, 0 100%, 0 10%);  flex-direction: column;
 }
 
 .stack-text {
@@ -653,18 +677,18 @@ font-size: 1.75rem;
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
   margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .list-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: .5rem 0;
-  width: 20rem;
 }
 
 .list-item h2 {
@@ -678,7 +702,7 @@ font-size: 1.75rem;
 /* ----- smaller screen sizes ----- */
 @media (max-width: 680px) {
   .stack-container {
-    min-height: 70rem;
+    min-height: 75rem;
     clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 100%, 70% 95%, 30% 95%, 0 100%, 0% 30%);
   }
 }
@@ -690,9 +714,9 @@ font-size: 1.75rem;
 .about {
   position: relative;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 80%;
   background: #222;
-
+  text-align: center;
 }
 
 
@@ -716,7 +740,6 @@ font-size: 1.75rem;
   font-family: 'Aquire', sans-serif;
   font-size: 2.5em;
   color: #ff6101;
-  text-shadow: 2px solid #fff;
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -734,7 +757,7 @@ font-size: 1.75rem;
 
 /* ------------------------------------------------------------- */
 /* ----- smaller screen sizes ----- */
-@media (max-width: 880px) {
+@media (max-width: 1000px) {
   .about-text {
     margin: 0 2em;
   }
@@ -784,6 +807,8 @@ font-size: 1.75rem;
 #name:hover, #email:hover, #phone:hover {
   background: #222;
   border: 2px solid #ff6101;
+  transition: 0.2s ease-in;
+
 }
 
 
@@ -840,6 +865,8 @@ input[type=submit]:hover {
   background-color: #222;
   color: #fff;
   border: 2px solid #ff6101;
+  transition: 0.2s ease-in;
+
 }
 
 textarea {
@@ -944,6 +971,8 @@ textarea {
 .social-footer a:hover {
   color: #fff;
   opacity: 75%;
+  transition: 0.2s ease-in;
+
 }
 
 
@@ -993,6 +1022,8 @@ a.foot:hover:before {
   width: 72%;
   color: #fff;
   opacity: 75%;
+  transition: 0.2s ease-in;
+
 } 
 
 
